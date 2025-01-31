@@ -16,7 +16,7 @@ public class Order {
     }
 
     // 계산된 결과 = 원가 - 할인된 가격
-    public int caculatePrice() {
+    public int calculatePrice() {
         return itemPrice - discountPrice;
     }
 
@@ -61,4 +61,5 @@ public class Order {
                 ", discountPrice=" + discountPrice +
                 '}';
     }
+
 }
