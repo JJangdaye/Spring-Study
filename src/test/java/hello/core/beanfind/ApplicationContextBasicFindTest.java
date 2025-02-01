@@ -27,4 +27,13 @@ class ApplicationContextBasicFindTest {
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
 
+    @Test
+    @DisplayName("구체 타입으로 조회")
+    void findBeanByName2(){
+        // 구현체로 조회할 수도 있는데 좋진 않음
+        // 언제나 역할, 인터페이스, 추상화에 의존하는 게 더 좋음
+        MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
+        assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
+    }
+
 }
