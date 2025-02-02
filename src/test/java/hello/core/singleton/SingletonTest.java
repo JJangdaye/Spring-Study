@@ -1,4 +1,4 @@
-package hello.core.singleton;
+﻿package hello.core.singleton;
 
 import hello.core.AppConfig;
 import hello.core.member.MemberService;
@@ -25,5 +25,18 @@ public class SingletonTest {
 
         //memberService1 != memberService2
         assertThat(memberService1).isNotSameAs(memberService2);
+    }
+
+    @Test
+    @DisplayName("싱글톤 패턴을 적용한 객체 사용")
+    void singletonServiceTest(){
+        SingletonService singletonService1 = SingletonService.getInstance();
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        // 같은 객체 인스턴스 반환!
+        System.out.println("singletonService1 = " + singletonService1);
+        System.out.println("singletonService2 = " + singletonService2);
+
+        assertThat(singletonService1).isSameAs(singletonService2);
     }
 }
