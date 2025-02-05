@@ -3,7 +3,10 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     // 인터페이스에만 의존하는 중! = 철저하게 DIP를 지키고 있음 good
@@ -12,6 +15,7 @@ public class OrderServiceImpl implements OrderService {
 
     // final이 있으면 무조건 기본으로 생성자를 할당해야 함
     // 생성자를 통해 어떤 구현 객체가 주입될지는 전혀 알 수 없는 상태
+    @Autowired // 자동으로 의존관계 주입해준다!
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
