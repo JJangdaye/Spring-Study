@@ -3,7 +3,7 @@ package hello.core.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component // 내 Bean이 자동으로 등록
+@Component// 내 Bean이 자동으로 등록
 public class MemberServiceImpl implements MemberService {
 
     // MemberServiceImpl에 MemoyMemberRepository처럼 구현체가 있는 게 X, MemeberRepository라는 인터페이스만 존재!
