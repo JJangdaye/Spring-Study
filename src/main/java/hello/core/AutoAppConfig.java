@@ -18,19 +18,11 @@ import org.springframework.context.annotation.FilterType;
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 public class AutoAppConfig {
-
-    // not recommended
-    @Autowired MemberRepository memberRepository;
-    @Autowired
-    DiscountPolicy discountPolicy;
-
-    @Bean
-    OrderService orderService(){
-        return new OrderServiceImpl(memberRepository, discountPolicy);
-    }
-
+/*
     @Bean(name = "memoryMemberRepository")
     MemberRepository memoryMemberRepository() {
         return new MemoryMemberRepository();
     }
+
+*/
 }

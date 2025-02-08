@@ -1,6 +1,5 @@
 package hello.core.order;
 
-import com.sun.source.tree.UsesTree;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
