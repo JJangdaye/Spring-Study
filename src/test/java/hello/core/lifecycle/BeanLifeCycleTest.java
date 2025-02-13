@@ -16,6 +16,7 @@ public class BeanLifeCycleTest {
 
     @Configuration
     static class LifeCycleConfig {
+
         @Bean
         public NetworkClient networkClient() {
             NetworkClient networkClient = new NetworkClient();
@@ -23,5 +24,4 @@ public class BeanLifeCycleTest {
             return networkClient;
         }
     }
-
 }
